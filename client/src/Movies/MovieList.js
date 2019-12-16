@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const MovieList = props => {
   const [movies, setMovies] = useState([])
+  
   useEffect(() => {
     const getMovies = () => {
       axios
@@ -30,6 +31,7 @@ const MovieList = props => {
 
 function MovieDetails({ movie }) {
   const { title, director, metascore, stars, id } = movie;
+
   return (
     <Link to={`/movies/${id}`}>
       <div className="movie-card">
